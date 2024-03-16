@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="demo.css">
+
+</head>
+<body>
+	<div class="wrapper">
+  <div class="login-text">
+    <button class="cta"><i class="fas fa-chevron-down fa-1x"></i></button>
+    <div class="text">
+      <a href="">Login</a>
+      <hr>
+      <br>
+      <input type="text" placeholder="Username" name="name">
+      <br>
+      <input type="password" placeholder="Password" name="pass">
+      <br>
+      <button class="login-btn" type="submit">Log In</button>
+       <button class="login-btn" type="submit" onClick="myFunction()">Sign In</button>
+    </div>
+  </div>
+  <script>
+  var cta = document.querySelector(".cta");
+  var check = 0;
+
+  cta.addEventListener('click', function(e){
+      var text = e.target.nextElementSibling;
+      var loginText = e.target.parentElement;
+      text.classList.toggle('show-hide');
+      loginText.classList.toggle('expand');
+      if(check == 0)
+      {
+          cta.innerHTML = "<i class=\"fas fa-chevron-up\"></i>";
+          check++;
+      }
+      else
+      {
+          cta.innerHTML = "<i class=\"fas fa-chevron-down\"></i>";
+          check = 0;
+      }
+  })
+  
+  function myFunction() {
+        window.location.href="Registration.html";  
+      }
+  </script>
+</div>
+</body>
+</html>
